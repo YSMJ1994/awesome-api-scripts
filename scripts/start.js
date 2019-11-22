@@ -68,6 +68,10 @@ function start() {
 				warnings: warnings => devServer.sockWrite(devServer.sockets, 'warnings', warnings),
 				errors: errors => devServer.sockWrite(devServer.sockets, 'errors', errors)
 			};
+			if (isInteractive) {
+				clearConsole();
+			}
+			console.log(chalk.cyan('Starting the development server...\n'));
 			const compiler = createCompiler({
 				config: webpackConfig,
 				devSocket,
@@ -79,12 +83,8 @@ function start() {
 			const devServer = new WebpackDevServer(compiler, serverConfig);
 			devServer.listen(port, err => {
 				if (err) {
-					return console.log(err);
+					console.log(err);
 				}
-				if (isInteractive) {
-					clearConsole();
-				}
-				console.log(chalk.cyan('Starting the development server...\n'));
 			});
 
 			['SIGINT', 'SIGTERM'].forEach(function(sig) {
