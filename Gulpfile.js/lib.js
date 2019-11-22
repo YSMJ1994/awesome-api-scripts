@@ -14,7 +14,7 @@ const tsProject = ts.createProject('tsconfig.json', {
 
 const root = appSrc;
 const outDest = path2GulpPath(resolveTarget('lib'));
-const ignore = [`!${root}/app/**/*`, `!${root}/doc/**/*`];
+const ignore = [`!${root}/app/`, `!${root}/doc/`];
 
 async function clean() {
 	fs.ensureDirSync(outDest);
