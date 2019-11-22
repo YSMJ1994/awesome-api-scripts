@@ -4,7 +4,7 @@
   "license": "MIT",
   "author": "zhaopengcheng <710411486@qq.com>",
   "bin": {
-    "react-ui-scripts": "bin/index.js"
+    "awesome-api-scripts": "bin/index.js"
   },
   "dependencies": {
     "@types/detect-port": "^1.1.0",
