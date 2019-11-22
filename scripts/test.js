@@ -5,12 +5,12 @@ process.on('unhandledRejection', err => {
 require('../config/env');
 const { spawn } = require('child_process');
 const { resolveTarget } = require('../config/paths');
-import { exists } from '../utils/fs'
+const { exists } = require('../utils/fs');
 
 const jestBinPath = resolveTarget('node_modules/.bin/jest');
 
 module.exports = function start(args) {
-	if(exists(jestBinPath)) {
+	if (exists(jestBinPath)) {
 		const jestProcess = spawn(jestBinPath, args, {
 			stdio: 'inherit'
 			// stdio: "ignore"
