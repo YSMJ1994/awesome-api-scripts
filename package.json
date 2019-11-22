@@ -1,8 +1,8 @@
 {
-  "name": "awesome-api-scripts",
+  "name": "@jinyiao/awesome-api-scripts",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "soberz <710411486@qq.com>",
+  "author": "zhaopengcheng <710411486@qq.com>",
   "bin": {
     "react-ui-scripts": "bin/index.js"
   },
