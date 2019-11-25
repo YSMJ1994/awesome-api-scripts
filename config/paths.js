@@ -33,6 +33,7 @@ module.exports = {
 	appSrc: resolveTarget('src'),
 	appPublic: resolveTarget('public'),
 	appIndexJs: resolveModule(resolveTarget, 'src/app/index'),
+	docIndexJs: resolveModule(resolveTarget, 'src/doc/index'),
 	appHtml: resolveTarget('public/index.html'),
 	appProxySetup: resolveTarget('src/app/proxy.js'),
 	moduleFileExtensions,
